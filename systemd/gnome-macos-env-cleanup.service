@@ -1,0 +1,14 @@
+[Unit]
+Description=Drop GNOME macOS rice env from the user manager on logout
+PartOf=graphical-session.target
+After=graphical-session.target
+ConditionEnvironment=GNOME_MACOS_RICE=1
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/true
+ExecStop=/usr/bin/systemctl --user unset-environment XDG_CONFIG_HOME DCONF_PROFILE XDG_DATA_DIRS GNOME_MACOS_RICE
+
+[Install]
+WantedBy=graphical-session.target

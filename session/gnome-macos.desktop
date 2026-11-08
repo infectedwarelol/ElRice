@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=GNOME (macOS rice)
+Comment=GNOME with isolated macOS/iPadOS rice settings
+Exec=@HOME@/rices/gnome-macos/session/start.sh
+TryExec=gnome-session
+Type=Application
+DesktopNames=GNOME
+X-GDM-SessionRegisters=true

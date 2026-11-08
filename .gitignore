@@ -1,0 +1,4 @@
+.installed/
+install.log
+*.bak*
+WhiteSur-gtk-theme/
