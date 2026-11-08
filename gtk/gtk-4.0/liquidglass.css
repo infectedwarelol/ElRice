@@ -1,0 +1,76 @@
+@define-color window_bg_color rgba(255, 255, 255, 0.16);
+@define-color view_bg_color rgba(255, 255, 255, 0.06);
+@define-color headerbar_bg_color rgba(255, 255, 255, 0.08);
+@define-color headerbar_backdrop_color rgba(255, 255, 255, 0.06);
+@define-color sidebar_bg_color rgba(255, 255, 255, 0.08);
+@define-color sidebar_backdrop_color rgba(255, 255, 255, 0.06);
+@define-color secondary_sidebar_bg_color rgba(255, 255, 255, 0.06);
+@define-color card_bg_color rgba(255, 255, 255, 0.12);
+@define-color dialog_bg_color rgba(255, 255, 255, 0.14);
+@define-color popover_bg_color rgba(255, 255, 255, 0.16);
+@define-color thumbnail_bg_color rgba(255, 255, 255, 0.12);
+@define-color accent_bg_color #ffffff;
+@define-color accent_fg_color #1c1c1e;
+@define-color accent_color #ffffff;
+
+window,
+window.background,
+.navigation-sidebar,
+headerbar,
+.sidebar-pane,
+.content-pane,
+toolbarview,
+scrolledwindow,
+viewport {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+window.background {
+  background-color: @window_bg_color;
+}
+
+headerbar,
+.sidebar-pane,
+.navigation-sidebar {
+  border: none;
+}
+
+.card,
+list.boxed-list,
+row.expander list,
+preferencesgroup > box > box > list {
+  background-color: @card_bg_color;
+  border: none;
+  box-shadow: none;
+  border-radius: 22px;
+}
+
+button,
+entry,
+spinbutton,
+dropdown > button,
+combobox > box > button {
+  border-radius: 999px;
+  border: none;
+  box-shadow: none;
+}
+
+button:not(.flat):not(.suggested-action):not(.destructive-action) {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+
+button.suggested-action,
+switch:checked,
+checkbutton check:checked,
+checkbutton radio:checked {
+  background-color: #ffffff;
+  color: #1c1c1e;
+}
+
+popover > contents,
+popover.menu > contents {
+  background-color: @popover_bg_color;
+  border-radius: 22px;
+  border: none;
+}
