@@ -1,0 +1,7 @@
+[Sound Theme]
+Name=macOS Glass
+Inherits=freedesktop
+Directories=stereo
+
+[stereo]
+OutputProfile=stereo
