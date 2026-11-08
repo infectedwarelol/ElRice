@@ -1,0 +1,32 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": { "type": "builtin", "source": "macos", "color": { "1": "38;2;138;164;255", "2": "38;2;150;155;255", "3": "38;2;160;140;255", "4": "38;2;180;140;250", "5": "38;2;205;145;240", "6": "38;2;230;160;230" }, "padding": { "top": 1, "right": 4 } },
+  "display": { "separator": "  ", "color": { "keys": "38;2;160;140;255", "title": "1;38;2;138;164;255" }, "key": { "width": 4 } },
+  "modules": [
+    { "type": "title", "format": " {user-name}@{host-name}" },
+    "break",
+    { "type": "custom", "format": "\u001b[1;38;2;138;164;255m System" },
+    { "type": "os", "key": "  󰣇" },
+    { "type": "kernel", "key": "  " },
+    { "type": "packages", "key": "  󰏖" },
+    { "type": "uptime", "key": "  󰅐" },
+    "break",
+    { "type": "custom", "format": "\u001b[1;38;2;138;164;255m Hardware" },
+    { "type": "cpu", "key": "  " },
+    { "type": "gpu", "key": "  󰢮" },
+    { "type": "memory", "key": "  " },
+    { "type": "disk", "key": "  󰋊" },
+    { "type": "battery", "key": "  󰁹" },
+    "break",
+    { "type": "custom", "format": "\u001b[1;38;2;138;164;255m Desktop" },
+    { "type": "de", "key": "  " },
+    { "type": "wm", "key": "  " },
+    { "type": "theme", "key": "  󰉼" },
+    { "type": "icons", "key": "  " },
+    { "type": "shell", "key": "  " },
+    { "type": "terminal", "key": "  " },
+    { "type": "media", "key": "  󰎈" },
+    "break",
+    { "type": "colors", "symbol": "block" }
+  ]
+}
