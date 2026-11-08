@@ -1,0 +1,278 @@
+.standby-card {
+  border-radius: 34px;
+  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.25);
+}
+.standby-glass {
+  border-radius: 34px;
+  background-repeat: no-repeat;
+}
+.standby-sheen {
+  border-radius: 34px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 255, 255, 0.16);
+  background-gradient-end: rgba(255, 255, 255, 0.07);
+}
+.standby-content {
+  padding: 18px 30px 18px 18px;
+  spacing: 26px;
+}
+.standby-weather {
+  spacing: 2px;
+  width: 178px;
+}
+.standby-city-row {
+  spacing: 5px;
+}
+.standby-city {
+  font-family: Inter, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.standby-arrow {
+  icon-size: 13px;
+  color: #ffffff;
+}
+.standby-temp {
+  font-family: Inter, sans-serif;
+  font-size: 58px;
+  font-weight: 300;
+  color: #ffffff;
+}
+.standby-condition-row {
+  spacing: 6px;
+  padding-top: 3px;
+}
+.standby-condition-icon {
+  icon-size: 17px;
+}
+.standby-condition {
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+}
+.standby-range {
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+#dashtodockContainer .dash-item-container .overview-tile .overview-icon,
+#dashtodockContainer .dash-item-container .show-apps .overview-icon {
+  border-radius: 18px;
+  transition-duration: 150ms;
+}
+#dashtodockContainer .dash-item-container .overview-tile:hover .overview-icon,
+#dashtodockContainer .dash-item-container .show-apps:hover .overview-icon {
+}
+#dashtodockContainer .dash-item-container .overview-tile:active .overview-icon,
+#dashtodockContainer .dash-item-container .overview-tile.focused .overview-icon,
+#dashtodockContainer .dash-item-container .show-apps:checked .overview-icon {
+}
+
+#panel {
+  background-color: transparent;
+}
+#panel .panel-button {
+  border-radius: 999px;
+  color: #ffffff;
+  font-weight: 600;
+}
+#panel .panel-button:hover,
+#panel .panel-button:active,
+#panel .panel-button:checked {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+#dashtodockContainer #dash {
+  background-color: transparent;
+  border-radius: 28px;
+  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.25);
+}
+.popup-menu-boxpointer {
+  -arrow-background-color: transparent !important;
+  -arrow-border-width: 0 !important;
+  -arrow-box-shadow: none !important;
+}
+.popup-menu-content,
+.popup-menu-boxpointer .popup-menu-content,
+.calendar,
+.message-list,
+.notification-banner,
+.osd-window,
+.switcher-list,
+.modal-dialog,
+.end-session-dialog {
+  background-color: rgba(255, 255, 255, 0.20) !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+}
+.popup-menu-boxpointer .popup-menu-content,
+.popup-menu-content {
+  margin: 0 !important;
+  border-radius: 28px !important;
+}
+.popup-menu-boxpointer .popup-menu-content.quick-settings,
+.quick-settings.popup-menu-content {
+  margin: 0 !important;
+  padding: 14px !important;
+  border-radius: 33px !important;
+  background-color: rgba(255, 255, 255, 0.20) !important;
+}
+.message-list,
+.quick-settings .quick-settings-grid {
+  background-color: transparent !important;
+}
+.quick-settings .quick-settings-grid .quick-toggle,
+.quick-settings .quick-settings-grid .quick-toggle-has-menu .quick-toggle,
+.quick-settings .quick-settings-grid .quick-toggle-has-menu .quick-toggle-menu-button,
+.quick-settings .quick-settings-system-item .icon-button,
+.quick-settings .icon-button,
+.quick-settings .button,
+.popup-menu-boxpointer .popup-menu-item:hover,
+.message-list .message,
+.calendar .calendar-day:hover,
+.events-button,
+.world-clocks-button,
+.weather-button {
+  background-color: rgba(255, 255, 255, 0.18) !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+  font-weight: 600;
+}
+.quick-settings .quick-settings-grid .quick-toggle,
+.quick-settings .quick-settings-system-item .icon-button,
+.quick-settings .icon-button,
+.quick-settings .button {
+  border-radius: 999px !important;
+}
+.message-list .message,
+.events-button,
+.world-clocks-button,
+.weather-button {
+  border-radius: 22px !important;
+}
+.quick-settings .quick-settings-grid .quick-toggle:hover,
+.quick-settings .quick-settings-grid .quick-toggle:active,
+.quick-settings .quick-settings-grid .quick-toggle-has-menu .quick-toggle-menu-button:hover,
+.quick-settings .quick-settings-grid .quick-toggle-has-menu .quick-toggle-menu-button:active,
+.quick-settings .quick-settings-system-item .icon-button:hover,
+.quick-settings .quick-settings-system-item .icon-button:active,
+.quick-settings .icon-button:hover,
+.quick-settings .button:hover,
+.message-list .message:hover {
+  background-color: rgba(255, 255, 255, 0.28) !important;
+}
+.quick-settings .quick-settings-grid .quick-toggle:checked,
+.quick-settings .quick-settings-grid .quick-toggle:checked:hover,
+.quick-settings .quick-settings-grid .quick-toggle:checked:active,
+.quick-settings .quick-settings-grid .quick-toggle-has-menu .quick-toggle-menu-button:checked,
+.quick-settings .quick-settings-grid .quick-toggle-has-menu .quick-toggle-menu-button:checked:hover,
+.quick-settings .quick-settings-grid .quick-toggle-has-menu .quick-toggle-menu-button:checked:active,
+.calendar .calendar-today,
+.calendar .calendar-today:selected {
+  background-color: #ffffff !important;
+  color: #1c1c1e !important;
+}
+.quick-settings .quick-settings-grid .quick-toggle:checked StIcon,
+.quick-settings .quick-settings-grid .quick-toggle:checked StLabel,
+.quick-settings .quick-settings-grid .quick-toggle:checked .quick-toggle-subtitle,
+.quick-settings .quick-settings-grid .quick-toggle-has-menu .quick-toggle-menu-button:checked StIcon {
+  color: #1c1c1e !important;
+}
+.quick-settings .quick-toggle-has-menu .quick-toggle-separator {
+  background-color: transparent !important;
+  width: 0 !important;
+}
+.quick-toggle-menu {
+  background-color: rgba(255, 255, 255, 0.14) !important;
+  border-radius: 24px !important;
+  color: #ffffff !important;
+}
+.quick-slider .slider-bin,
+.quick-settings .quick-slider .slider-bin {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.slider,
+.quick-settings .slider {
+  height: 28px !important;
+  border-radius: 999px !important;
+  -slider-handle-radius: 0 !important;
+  -barlevel-height: 28px !important;
+  -barlevel-background-color: rgba(255, 255, 255, 0.25) !important;
+  -barlevel-active-background-color: #ffffff !important;
+  -barlevel-border-width: 0 !important;
+  color: #ffffff !important;
+}
+.overview-components-light .search-entry,
+.overview-components-light .app-folder-dialog,
+.overview-components-light .search-section-content,
+.overview-components-light .workspace-background {
+  background-color: rgba(255, 255, 255, 0.20) !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+}
+.standby-widget-content {
+  padding: 18px 20px;
+  spacing: 2px;
+}
+.standby-widget-accent {
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ff6961;
+}
+.standby-widget-big {
+  font-family: Inter, sans-serif;
+  font-size: 52px;
+  font-weight: 300;
+  color: #ffffff;
+}
+.standby-widget-title {
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  padding-top: 6px;
+}
+.standby-widget-caption {
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+}
+.standby-widget-icon {
+  icon-size: 28px;
+  color: #ffffff;
+}
+.standby-widget-controls {
+  spacing: 18px;
+  padding-top: 12px;
+}
+.standby-widget-button {
+  border-radius: 999px;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.16);
+}
+.standby-widget-button:hover {
+  background-color: rgba(255, 255, 255, 0.28);
+}
+.standby-widget-button-icon {
+  icon-size: 18px;
+  color: #ffffff;
+}
+.standby-focused-app {
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 0 10px;
+}
+.notification-banner,
+.message-list .message {
+  border-radius: 22px !important;
+}

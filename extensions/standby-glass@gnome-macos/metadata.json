@@ -1,0 +1,7 @@
+{
+  "uuid": "standby-glass@gnome-macos",
+  "name": "StandBy Glass",
+  "description": "iOS StandBy style analog clock and weather card with a frosted glass surface.",
+  "shell-version": ["51"],
+  "version": 1
+}
