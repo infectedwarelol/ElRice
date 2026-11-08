@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Terminal
+Comment=Ghostty with the GNOME macOS profile
+Exec=ghostty --config-default-files=false --config-file=@HOME@/rices/gnome-macos/ghostty/config --class=com.mitchellh.ghostty.macos
+Icon=@HOME@/rices/gnome-macos/share/icons/macos-terminal.svg
+Type=Application
+Categories=System;TerminalEmulator;
+OnlyShowIn=GNOME;
+StartupWMClass=com.mitchellh.ghostty.macos
