@@ -224,6 +224,7 @@ export default class StandbyGlassExtension extends Extension {
 
         this._overviewBlurSettings = this._loadOverviewBlurSettings();
         this._overviewShowingId = Main.overview.connect('showing', () => this._syncOverviewBlur());
+        this._screenshotClosedId = Main.screenshotUI?.connect('closed', () => Main.screenshotUI._areaSelector?.resetArea?.()) ?? null;
 
         this._updateGlass();
         this._refreshWeather();
@@ -267,6 +268,9 @@ export default class StandbyGlassExtension extends Extension {
         this._interfaceSettings.disconnect(this._colorSchemeChangedId);
         this._backgroundGroup.disconnect(this._backgroundChildAddedId);
         Main.overview.disconnect(this._overviewShowingId);
+        if (this._screenshotClosedId)
+            Main.screenshotUI.disconnect(this._screenshotClosedId);
+        this._screenshotClosedId = null;
         this._overviewBlurSettings = null;
 
         this._focusedApp.destroy();
