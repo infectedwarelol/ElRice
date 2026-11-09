@@ -13,6 +13,7 @@ import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 import {DesktopWidgets, FocusedAppLabel} from './widgets.js';
+import {MediaGlassGuard} from './media.js';
 
 const CONFIG_PATH = GLib.build_filenamev([GLib.get_home_dir(), 'rices', 'gnome-macos', 'standby.json']);
 const CACHE_DIR = GLib.build_filenamev([GLib.get_user_cache_dir(), 'standby-glass']);
@@ -222,6 +223,7 @@ export default class StandbyGlassExtension extends Extension {
         this._backgroundChangedId = this._backgroundSettings.connect('changed', () => this._updateGlass());
         this._colorSchemeChangedId = this._interfaceSettings.connect('changed::color-scheme', () => this._updateGlass());
 
+        this._mediaGlassGuard = new MediaGlassGuard();
         this._overviewBlurSettings = this._loadOverviewBlurSettings();
         this._overviewShowingId = Main.overview.connect('showing', () => this._syncOverviewBlur());
         this._screenshotClosedId = Main.screenshotUI?.connect('closed', () => Main.screenshotUI._areaSelector?.resetArea?.()) ?? null;
@@ -268,6 +270,8 @@ export default class StandbyGlassExtension extends Extension {
         this._interfaceSettings.disconnect(this._colorSchemeChangedId);
         this._backgroundGroup.disconnect(this._backgroundChildAddedId);
         Main.overview.disconnect(this._overviewShowingId);
+        this._mediaGlassGuard.destroy();
+        this._mediaGlassGuard = null;
         if (this._screenshotClosedId)
             Main.screenshotUI.disconnect(this._screenshotClosedId);
         this._screenshotClosedId = null;
