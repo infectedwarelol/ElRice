@@ -2,7 +2,13 @@
 
 Created by [@infectedwarelol](https://github.com/infectedwarelol).
 
+![The ElRice desktop with the StandBy clock and widgets](screenshots/desktop.png)
+
 ElRice is a liquid glass GNOME rice for Arch Linux that borrows the look of macOS and iOS without pretending to be either. The top bar, dock, Quick Settings, menus and apps sit on white frosted glass over your wallpaper, a StandBy-style clock and a few widgets live on the bare desktop, and the login screen and terminal match the rest. It runs as its own GNOME session with its own settings, so the desktops you already have stay exactly as they are.
+
+| Terminal | Quick Settings | Overview |
+| --- | --- | --- |
+| ![Ghostty on glass](screenshots/terminal.png) | ![Quick Settings](screenshots/quick-settings.png) | ![Overview](screenshots/overview.png) |
 
 ## Install
 
