@@ -1,97 +1,67 @@
 # ElRice
 
-A liquid glass, macOS-flavoured GNOME rice for Arch Linux. White frosted panels, a StandBy-style clock with live weather, glass desktop widgets, a glass login screen and a matching terminal, all running in its own isolated GNOME session so the rest of your setup stays untouched.
+Created by [@infectedwarelol](https://github.com/infectedwarelol).
 
-![Desktop](screenshots/desktop.png)
+ElRice is a liquid glass GNOME rice for Arch Linux that borrows the look of macOS and iOS without pretending to be either. The top bar, dock, Quick Settings, menus and apps sit on white frosted glass over your wallpaper, a StandBy-style clock and a few widgets live on the bare desktop, and the login screen and terminal match the rest. It runs as its own GNOME session with its own settings, so the desktops you already have stay exactly as they are.
 
-| Quick Settings | Overview | Terminal |
-| --- | --- | --- |
-| ![Quick Settings](screenshots/quick-settings.png) | ![Overview](screenshots/overview.png) | ![Terminal](screenshots/terminal.png) |
+## Install
 
-## What you get
+Clone the repo into the path the rice expects, then run the installer as your normal user. It asks for sudo when it needs it.
 
-- **StandBy Glass extension**: analog clock and weather card on the desktop, plus Calendar, Now Playing (any MPRIS player, with controls) and Battery widgets. Hidden behind windows, only visible on the bare desktop.
-- **Focused app name** in the top bar next to the Apple logo.
-- **Liquid glass everywhere**: top bar, dock, Quick Settings, menus, notifications, OSDs and GTK apps get a white translucent fill over a blur.
-- **Smart overview blur**: pressing Super blurs the wallpaper only when you have apps open.
-- **Spotlight-style search** on Super+Space.
-- **Magic Lamp minimise** and **rounded window corners**.
-- **macOS Glass sound theme** for login, logout, screenshots and notifications.
-- **Ghostty** with a smoky glass background and a fastfetch Apple logo in the rice colours.
-- **macOS Glass SDDM theme** for the login screen.
+```bash
+git clone https://github.com/infectedwarelol/ElRice ~/rices/gnome-macos
+~/rices/gnome-macos/install.sh
+```
 
-## Requirements
+The installer pulls in GNOME, the WhiteSur GTK, icon and cursor themes, Ghostty and the Inter font, then fetches the extensions that match your GNOME Shell version from extensions.gnome.org. At the end it asks whether to install the glass login theme for SDDM.
 
-- Arch Linux (or a derivative) with `yay`
-- SDDM as display manager (GDM is not used or required)
-- A GNOME Shell version supported by the extensions listed below (tested on GNOME 51)
+You need Arch or a derivative with `yay`, and SDDM as your display manager. GDM is not used. It was built and tested on GNOME 51.
 
-## Installation
+## Use
 
-1. Clone the repo into the exact path the rice expects:
+Log out, pick **GNOME (macOS rice)** in SDDM and log in. Pick that session and not plain "GNOME", because the rice keeps its own dconf database and its own config folder in `~/.config-gnome-macos`.
 
-   ```bash
-   git clone https://github.com/infectedwarelol/ElRice.git ~/rices/gnome-macos
-   ```
+Press Super+Space to search, Super to open the overview, and Super+Shift+S to take a screenshot.
 
-2. Run the installer as your normal user (it asks for sudo when needed):
+## What it does
 
-   ```bash
-   ~/rices/gnome-macos/install.sh
-   ```
+- **StandBy clock.** An analog clock and weather card on the desktop, with Calendar, Now Playing and Battery widgets underneath. Now Playing follows any music player and has its own controls. Everything hides behind your windows and only shows on the bare desktop.
+- **Glass everywhere.** The top bar, dock, Quick Settings, menus, notifications, volume popups and GTK apps all sit on white translucent glass over a blur. Switches that are on turn solid white, like on iOS.
+- **Overview.** Pressing Super blurs the wallpaper, but only when you have apps open.
+- **Top bar.** Shows the name of the focused app next to the Apple logo.
+- **Windows.** Rounded corners on every window and a Magic Lamp minimise animation.
+- **Terminal.** Ghostty on smoky glass, with a fastfetch Apple logo in the rice colours.
+- **Login screen.** A glass SDDM theme with a blurred wallpaper, a big clock and a pill-shaped password field.
+- **Sounds.** A macOS-style sound theme for login, logout, screenshots and notifications.
 
-   It installs GNOME, the WhiteSur GTK, icon and cursor themes, Ghostty, Inter, and these extensions from extensions.gnome.org:
-
-   | Extension | Purpose |
-   | --- | --- |
-   | User Themes | WhiteSur shell theme |
-   | Dash to Dock | macOS-style dock |
-   | Blur my Shell | All the glass blur |
-   | Search Light | Spotlight-style search |
-   | Logo Menu | Apple menu |
-   | OpenWeather Refined | Weather in the top bar |
-   | Media Controls | Player controls in the top bar |
-   | Quick Settings Tweaks | Extra Quick Settings options |
-   | Compiz alike Magic Lamp Effect | Minimise animation |
-   | Rounded Window Corners Reborn | Rounded corners on every window |
-
-   It also offers to install the SDDM login theme.
-
-3. Log out, pick **GNOME (macOS rice)** in SDDM and log in.
-
-> Pick the rice session, not plain "GNOME". The rice keeps its own dconf database and config folder (`~/.config-gnome-macos`), so your other desktops keep their settings.
-
-## Customising
+## Make it yours
 
 | What | Where |
 | --- | --- |
-| Weather city and unit | `standby.json` (`"city"`, `"unit": "celsius"` or `"fahrenheit"`) |
-| Glass strength of shell UI | `extensions/standby-glass@gnome-macos/stylesheet.css` |
-| Glass strength of GTK apps | `gtk/gtk-4.0/liquidglass.css`, `gtk/gtk-3.0/liquidglass.css` |
-| Blur amount and tint | Blur my Shell preferences, pipelines "Classic Light Background" and "Overview Soft" |
-| Terminal transparency | `ghostty/config` (`background-opacity`) |
-| Terminal logo and colours | `fastfetch/config.jsonc` |
-| Wallpaper | replace `wallpaper/wallpaper.jpg` |
+| Weather city and unit | `standby.json` |
+| Glass on the shell | `extensions/standby-glass@gnome-macos/stylesheet.css` |
+| Glass on apps | `gtk/gtk-4.0/liquidglass.css` and `gtk/gtk-3.0/liquidglass.css` |
+| Blur strength and tint | Blur my Shell preferences, pipelines "Classic Light Background" and "Overview Soft" |
+| Terminal transparency | `background-opacity` in `ghostty/config` |
+| Terminal logo | `fastfetch/config.jsonc` |
+| Wallpaper | `wallpaper/wallpaper.jpg` |
 
-After editing the extension files, log out and back in. GNOME on Wayland only reloads extension code on a new session.
+GNOME on Wayland only reloads extension code in a new session, so log out and back in after you change the extension files.
 
-## Uninstalling
+## Uninstall
 
 ```bash
 ~/rices/gnome-macos/revert.sh
 ```
 
-This removes the session entry, the rice dconf database, the rice config folder, the extensions it installed, and the SDDM theme. It prints the packages it added so you can remove them yourself.
+It removes the session entry, the rice settings and config folder, the extensions it installed and the SDDM theme, then prints the packages it added so you can remove them yourself.
 
-## Troubleshooting
+## If something looks off
 
-- **Clock shows "Weather unavailable"**: the card uses wttr.in. Check that `curl https://wttr.in` works on your network.
-- **Glass looks grey**: make sure Blur my Shell is enabled and the session is the rice session.
-- **Changes do not show up**: log out and back in.
+- **The clock says "Weather unavailable".** The weather comes from wttr.in, so check that `curl https://wttr.in` works on your network.
+- **The glass looks grey.** Make sure Blur my Shell is on and that you logged into the rice session.
+- **A change does not show up.** Log out and back in.
 
 ## Credits
 
-- [WhiteSur GTK, icon and cursor themes](https://github.com/vinceliuice) by vinceliuice
-- [Blur my Shell](https://github.com/aunetx/blur-my-shell), [Search Light](https://github.com/icedman/search-light) and the other extensions listed above
-- [Ghostty](https://ghostty.org) and [fastfetch](https://github.com/fastfetch-cli/fastfetch)
-- Weather by [wttr.in](https://wttr.in)
+Built on the [WhiteSur themes](https://github.com/vinceliuice) by vinceliuice, [Blur my Shell](https://github.com/aunetx/blur-my-shell), [Search Light](https://github.com/icedman/search-light), Dash to Dock, Logo Menu, OpenWeather Refined, Media Controls, Quick Settings Tweaks, Compiz alike Magic Lamp Effect, Rounded Window Corners Reborn, [Ghostty](https://ghostty.org) and [fastfetch](https://github.com/fastfetch-cli/fastfetch). Weather by [wttr.in](https://wttr.in).
