@@ -54,6 +54,10 @@ Press Super+Space to search, Super to open the overview, and Super+Shift+S to ta
 
 GNOME on Wayland only reloads extension code in a new session, so log out and back in after you change the extension files.
 
+## Performance
+
+The top bar and dock use a static blur, which is blurred once instead of every frame. That keeps GNOME Shell light even with glass on every window. If an app still feels heavy, add its window class to the Blur my Shell applications blacklist so it renders without glass.
+
 ## Uninstall
 
 ```bash
