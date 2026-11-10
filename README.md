@@ -58,6 +58,10 @@ GNOME on Wayland only reloads extension code in a new session, so log out and ba
 
 The top bar and dock use a static blur, which is blurred once instead of every frame. That keeps GNOME Shell light even with glass on every window. If an app still feels heavy, add its window class to the Blur my Shell applications blacklist so it renders without glass.
 
+## Spotify debloat
+
+`spotify-debloat/` patches the Spotify client with SpotX and a light Spicetify theme, then re-patches it automatically after every update. Clone ElRice, copy that folder to `~/.local/share/spotify-debloat` and run its `install.sh`. See `spotify-debloat/README.md` for details and `revert.sh` to undo it.
+
 ## Rust helper
 
 `rust/spotify-debloat-check` is a small Rust binary that checks whether Spotify is already patched before the debloat script runs. That check used to start bash and Python on every Spotify launcher update; it now takes about 1 ms instead of 40 ms. Build it with `cargo build --release` inside `rust/` and copy `target/release/spotify-debloat-check` to `~/.local/bin`. The units in `systemd/` call it.
