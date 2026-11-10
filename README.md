@@ -1,4 +1,4 @@
-# ElRice
+# ElRice - Rust soon!
 
 Created by [@infectedwarelol](https://github.com/infectedwarelol).
 
