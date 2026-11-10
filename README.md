@@ -66,6 +66,8 @@ The top bar and dock use a static blur, which is blurred once instead of every f
 
 `rust/spotify-debloat-check` is a small Rust binary that checks whether Spotify is already patched before the debloat script runs. That check used to start bash and Python on every Spotify launcher update; it now takes about 1 ms instead of 40 ms. Build it with `cargo build --release` inside `rust/` and copy `target/release/spotify-debloat-check` to `~/.local/bin`. The units in `systemd/` call it.
 
+The same crate also builds `spotify-lite`, a Rust version of the Spotify launcher wrapper that runs the patch check in-process before starting Spotify (about 2.6 ms instead of 38 ms per launch). Copy `target/release/spotify-lite` to `~/.local/bin` and point the Spotify desktop entry's `Exec=` at it.
+
 ## Uninstall
 
 ```bash
