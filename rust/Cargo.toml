@@ -1,0 +1,10 @@
+[workspace]
+members = ["spotify-debloat-check"]
+resolver = "2"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
+opt-level = 3
+panic = "abort"
